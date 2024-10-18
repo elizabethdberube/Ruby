@@ -1,25 +1,32 @@
 
 <div class="log">
 <p>
-<h5>Title:</h5>
+<h1>Title:</h1>
   <%= @article.title %>
 </p>
  
 <p>
-<h5>Text:</h5>
+<h2>Text:</h2>
   <%= @article.text %>
 </p>
-<h5>Comments</h5>
-<% if !@article.comments == nil %>
+<div class="card"  style="width: 18rem;">
+  <div class="card-body">
+<h3>Comments:</h3>
+<% if  !@article.comments.empty? %>
 <%= render @article.comments %>
 <% else %>
 <p> There are no comments for this article </p>
 
 <% end %>
- 
+ </div>
+</div>
+
+<div class="card mt-4 mb-4"  style="width: 18rem;">
+  <div class="card-body">
 <h5>Add a comment:</h5>
 <%= render 'comments/form' %>
-
+ </div>
+</div>
 <ul>
   <li><%= link_to "Edit", edit_article_path(@article) %></li>
   <li><%= link_to "Delete", article_path(@article), data: {

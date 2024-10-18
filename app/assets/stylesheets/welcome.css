@@ -24,6 +24,17 @@ body {
 
 }
 
+.click{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: #33a;
+ 
+
+
+}
+
 /* header */
 .welcome_articles {
   padding-top: 10%;

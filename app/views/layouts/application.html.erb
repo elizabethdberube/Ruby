@@ -38,7 +38,9 @@
           <%= link_to 'Main Page', welcome_index_path, :class=>"nav-link" %>
          </li>
           <li class='nav-item'>
-            <%= link_to "Log out", destroy_user_session_path, :method=>'delete',  :class=>"nav-link"%>
+     
+            <%= button_to "Sign out", destroy_user_session_path, method: :delete,  :class=>"nav-link" %> 
+
           </li>
   
       </ul>
@@ -63,6 +65,7 @@
 <div class="warning">
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
+    
 </div>
     <%= yield %>
   </body>

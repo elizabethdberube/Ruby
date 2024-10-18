@@ -2,7 +2,7 @@
 <h1 class="recent">Welcome <%= @username %>!</h1>
 <hr>
 <br>
-<%= form_tag "articles/", method: "GET" do %>
+<%= form_tag "/articles", method: "GET" do %>
   <%= label_tag :search_by_title %>
 
   <%= text_field_tag :search_by_title, params[:search_by_title] %>
@@ -35,6 +35,8 @@
  
 <ul>
   <% @articles.each do |article| %>
+
+    
     <li>
 <%= link_to article.title,  article_path(article.id) %>
     </li>

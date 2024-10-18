@@ -12,5 +12,6 @@
 <p>
 <%= button_to 'Destroy Comment', [comment.article, comment],
                 method: :delete,
-                data: { confirm: "Are you sure?" } %>
+                data: { confirm: "Are you sure?" }, :class=> 'btn btn-secondary' %>
 </p>
+
